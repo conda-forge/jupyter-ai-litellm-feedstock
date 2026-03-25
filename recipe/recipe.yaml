@@ -1,5 +1,5 @@
 context:
-  version: "0.0.1"
+  version: "0.0.2"
 
 package:
   name: jupyter-ai-litellm
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-ai-litellm/jupyter_ai_litellm-${{ version }}.tar.gz
-  sha256: 38d103552f3bb637e18509b2f6608b545bb3b4d45064a8558e4efedfcef5b104
+  sha256: 99a4ecb46026a6ee0bcea34b969d1703823224cb0c1a8b1f64891cf3208233f8
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - jupyter_server >=2.4.0,<3
-    - litellm >=1.73,<2
+    - litellm <=1.82.6
 
 tests:
   - python:
